@@ -9,8 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UslugeRouteImport } from './routes/usluge'
+import { Route as ONamaRouteImport } from './routes/o-nama'
+import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as KakoFunkcioniraRouteImport } from './routes/kako-funkcionira'
 import { Route as IndexRouteImport } from './routes/index'
 
+const UslugeRoute = UslugeRouteImport.update({
+  id: '/usluge',
+  path: '/usluge',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ONamaRoute = ONamaRouteImport.update({
+  id: '/o-nama',
+  path: '/o-nama',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KakoFunkcioniraRoute = KakoFunkcioniraRouteImport.update({
+  id: '/kako-funkcionira',
+  path: '/kako-funkcionira',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +43,78 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/kako-funkcionira': typeof KakoFunkcioniraRoute
+  '/kontakt': typeof KontaktRoute
+  '/o-nama': typeof ONamaRoute
+  '/usluge': typeof UslugeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/kako-funkcionira': typeof KakoFunkcioniraRoute
+  '/kontakt': typeof KontaktRoute
+  '/o-nama': typeof ONamaRoute
+  '/usluge': typeof UslugeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/kako-funkcionira': typeof KakoFunkcioniraRoute
+  '/kontakt': typeof KontaktRoute
+  '/o-nama': typeof ONamaRoute
+  '/usluge': typeof UslugeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/kako-funkcionira' | '/kontakt' | '/o-nama' | '/usluge'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/kako-funkcionira' | '/kontakt' | '/o-nama' | '/usluge'
+  id:
+    | '__root__'
+    | '/'
+    | '/kako-funkcionira'
+    | '/kontakt'
+    | '/o-nama'
+    | '/usluge'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  KakoFunkcioniraRoute: typeof KakoFunkcioniraRoute
+  KontaktRoute: typeof KontaktRoute
+  ONamaRoute: typeof ONamaRoute
+  UslugeRoute: typeof UslugeRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/usluge': {
+      id: '/usluge'
+      path: '/usluge'
+      fullPath: '/usluge'
+      preLoaderRoute: typeof UslugeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/o-nama': {
+      id: '/o-nama'
+      path: '/o-nama'
+      fullPath: '/o-nama'
+      preLoaderRoute: typeof ONamaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kako-funkcionira': {
+      id: '/kako-funkcionira'
+      path: '/kako-funkcionira'
+      fullPath: '/kako-funkcionira'
+      preLoaderRoute: typeof KakoFunkcioniraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +127,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  KakoFunkcioniraRoute: KakoFunkcioniraRoute,
+  KontaktRoute: KontaktRoute,
+  ONamaRoute: ONamaRoute,
+  UslugeRoute: UslugeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
