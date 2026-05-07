@@ -121,10 +121,12 @@ function KontaktPage() {
                 </div>
                 <button
                   type="submit"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full gradient-cta px-7 py-3.5 text-sm font-semibold text-white shadow-soft transition-transform hover:scale-[1.01]"
+                  disabled={sending}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full gradient-cta px-7 py-3.5 text-sm font-semibold text-white shadow-soft transition-transform hover:scale-[1.01] disabled:opacity-60"
                 >
-                  Pošalji upit <Send size={16} />
+                  {sending ? "Šaljem..." : <>Pošalji upit <Send size={16} /></>}
                 </button>
+                {error && <p className="text-sm text-destructive">{error}</p>}
                 <p className="text-xs text-muted-foreground">Šaljući obrazac slažete se s obradom podataka u svrhu odgovora na upit.</p>
               </div>
             )}
