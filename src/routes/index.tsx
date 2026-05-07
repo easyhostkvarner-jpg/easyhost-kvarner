@@ -45,14 +45,11 @@ function Index() {
             <span className="inline-block rounded-full bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-dark">
               Kvarner & Istra
             </span>
-            <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] text-brand-dark sm:text-6xl lg:text-7xl">
-              Vaš dom,<br />naša briga.
+            <h1 className="mt-6 font-display text-4xl font-bold leading-[1.1] text-brand-dark sm:text-5xl lg:text-6xl">
+              Jednostavno upravljanje smještajem na Kvarneru
             </h1>
             <p className="mt-6 max-w-xl text-lg text-foreground/80">
-              Profesionalno upravljanje apartmanima i kućama za odmor na području Kvarnera i Istre.
-            </p>
-            <p className="mt-2 max-w-xl text-base text-muted-foreground">
-              Vi uživajte u prihodima — mi se brinemo o svemu ostalom.
+              Brinemo o vašim apartmanima i kućama za odmor – od prijave gostiju, prijave u eVisitor, čišćenja i posteljine – vi uživate, a mi radimo.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/kontakt" className="inline-flex items-center gap-2 rounded-full gradient-cta px-7 py-3.5 text-sm font-semibold text-white shadow-soft transition-transform hover:scale-105">
