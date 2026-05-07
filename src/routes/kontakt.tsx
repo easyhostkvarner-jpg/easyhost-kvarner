@@ -1,7 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
+// EmailJS konfiguracija — zamijenite ovim vrijednostima iz vašeg EmailJS dashboarda (https://dashboard.emailjs.com)
+const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
 
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
@@ -17,6 +23,9 @@ export const Route = createFileRoute("/kontakt")({
 
 function KontaktPage() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
   return (
     <Layout>
       <section className="bg-sand/40 py-20">
@@ -59,19 +68,27 @@ function KontaktPage() {
           </div>
 
           <form
+            ref={formRef}
             className="lg:col-span-3 rounded-3xl border border-border bg-card p-8 shadow-card"
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
-              const fd = new FormData(e.currentTarget);
-              const name = String(fd.get("name") || "");
-              const email = String(fd.get("email") || "");
-              const phone = String(fd.get("phone") || "");
-              const location = String(fd.get("location") || "");
-              const message = String(fd.get("message") || "");
-              const subject = `Upit s weba — ${name}`;
-              const body = `Ime: ${name}\nEmail: ${email}\nTelefon: ${phone}\nLokacija: ${location}\n\nPoruka:\n${message}`;
-              window.location.href = `mailto:selmanajna@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-              setSent(true);
+              if (!formRef.current) return;
+              setSending(true);
+              setError(null);
+              try {
+                await emailjs.sendForm(
+                  EMAILJS_SERVICE_ID,
+                  EMAILJS_TEMPLATE_ID,
+                  formRef.current,
+                  { publicKey: EMAILJS_PUBLIC_KEY },
+                );
+                setSent(true);
+              } catch (err) {
+                console.error(err);
+                setError("Slanje nije uspjelo. Pokušajte ponovno ili nas kontaktirajte direktno.");
+              } finally {
+                setSending(false);
+              }
             }}
           >
             <h2 className="font-display text-2xl font-bold text-brand-dark">Pošaljite upit</h2>
@@ -104,10 +121,12 @@ function KontaktPage() {
                 </div>
                 <button
                   type="submit"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full gradient-cta px-7 py-3.5 text-sm font-semibold text-white shadow-soft transition-transform hover:scale-[1.01]"
+                  disabled={sending}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full gradient-cta px-7 py-3.5 text-sm font-semibold text-white shadow-soft transition-transform hover:scale-[1.01] disabled:opacity-60"
                 >
-                  Pošalji upit <Send size={16} />
+                  {sending ? "Šaljem..." : <>Pošalji upit <Send size={16} /></>}
                 </button>
+                {error && <p className="text-sm text-destructive">{error}</p>}
                 <p className="text-xs text-muted-foreground">Šaljući obrazac slažete se s obradom podataka u svrhu odgovora na upit.</p>
               </div>
             )}
