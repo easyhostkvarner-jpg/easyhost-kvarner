@@ -16,7 +16,7 @@ export function Footer() {
           <h4 className="text-sm font-semibold uppercase tracking-wider text-white/70">Kontakt</h4>
           <ul className="mt-4 space-y-3 text-sm">
             <li className="flex items-center gap-3"><Phone size={16} /> +385 99 123 4567</li>
-            <li className="flex items-center gap-3"><Mail size={16} /> info@easyhost-kvarner.hr</li>
+            <li className="flex items-center gap-3"><Mail size={16} /> <a href="mailto:selmanajna@gmail.com" className="hover:text-white/80">selmanajna@gmail.com</a></li>
             <li className="flex items-center gap-3"><MapPin size={16} /> Kvarner & Istra</li>
           </ul>
         </div>
@@ -32,8 +32,8 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-wider text-white/70">Pratite nas</h4>
           <div className="mt-4 flex gap-3">
-            <a href="#" aria-label="Instagram" className="rounded-full bg-white/10 p-3 hover:bg-white/20"><Instagram size={18} /></a>
-            <a href="#" aria-label="Facebook" className="rounded-full bg-white/10 p-3 hover:bg-white/20"><Facebook size={18} /></a>
+            <a href="https://www.instagram.com/easyhost.kvarner?igsh=MXNhZGFvN2hsN2Rvag==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="rounded-full bg-white/10 p-3 hover:bg-white/20"><Instagram size={18} /></a>
+            <a href="https://www.facebook.com/share/18aMG9Fix5/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="rounded-full bg-white/10 p-3 hover:bg-white/20"><Facebook size={18} /></a>
           </div>
         </div>
       </div>
