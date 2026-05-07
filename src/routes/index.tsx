@@ -45,14 +45,11 @@ function Index() {
             <span className="inline-block rounded-full bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-dark">
               Kvarner & Istra
             </span>
-            <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] text-brand-dark sm:text-6xl lg:text-7xl">
-              Vaš dom,<br />naša briga.
+            <h1 className="mt-6 font-display text-4xl font-bold leading-[1.1] text-brand-dark sm:text-5xl lg:text-6xl">
+              Jednostavno upravljanje smještajem na Kvarneru
             </h1>
             <p className="mt-6 max-w-xl text-lg text-foreground/80">
-              Profesionalno upravljanje apartmanima i kućama za odmor na području Kvarnera i Istre.
-            </p>
-            <p className="mt-2 max-w-xl text-base text-muted-foreground">
-              Vi uživajte u prihodima — mi se brinemo o svemu ostalom.
+              Brinemo o vašim apartmanima i kućama za odmor – od prijave gostiju, prijave u eVisitor, čišćenja i posteljine – vi uživate, a mi radimo.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/kontakt" className="inline-flex items-center gap-2 rounded-full gradient-cta px-7 py-3.5 text-sm font-semibold text-white shadow-soft transition-transform hover:scale-105">
@@ -187,6 +184,33 @@ function Index() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-background py-20">
+        <div className="mx-auto max-w-3xl px-4 lg:px-8">
+          <div className="text-center">
+            <h2 className="font-display text-sm font-bold uppercase tracking-[0.2em] text-brand">FAQ</h2>
+            <p className="mt-2 font-display text-3xl font-bold text-brand-dark sm:text-4xl">Često postavljana pitanja</p>
+          </div>
+          <div className="mt-10 space-y-4">
+            {[
+              { q: "Što je sve uključeno u vaše usluge?", a: "Sve od komunikacije s gostima, prijave u eVisitor, čišćenja i vođenja evidencije, do izdavanja računa." },
+              { q: "Moram li biti prisutan kod dolaska gostiju?", a: "Ne — naš tim preuzima cijeli proces check-ina i check-outa." },
+              { q: "Mogu li birati koje usluge želim?", a: "Da, svi paketi su fleksibilni i prilagođeni potrebama svakog objekta." },
+              { q: "Na kojem području radite?", a: "Pokrivamo cijeli Kvarner i dio Istre (Opatija, Ičići, Lovran, Mošćenička Draga, Matulji…)." },
+              { q: "Koliko brzo možete preuzeti novi objekt?", a: "U pravilu unutar 7 dana od dogovora i potpisivanja ugovora." },
+            ].map((f, i) => (
+              <details key={i} className="group rounded-2xl border border-border bg-card p-6 shadow-card open:shadow-soft">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
+                  <span className="font-display font-semibold text-brand-dark">{f.q}</span>
+                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-brand/10 text-brand transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-4 text-muted-foreground">{f.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>

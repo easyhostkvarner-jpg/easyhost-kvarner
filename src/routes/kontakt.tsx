@@ -32,7 +32,7 @@ function KontaktPage() {
           <div className="lg:col-span-2 space-y-4">
             {[
               { icon: Phone, t: "Telefon", v: "+385 99 123 4567", href: "tel:+385991234567" },
-              { icon: Mail, t: "Email", v: "info@easyhost-kvarner.hr", href: "mailto:info@easyhost-kvarner.hr" },
+              { icon: Mail, t: "Email", v: "selmanajna@gmail.com", href: "mailto:selmanajna@gmail.com" },
               { icon: MapPin, t: "Lokacija", v: "Kvarner & Istra" },
             ].map((c) => {
               const Inner = (
@@ -60,7 +60,19 @@ function KontaktPage() {
 
           <form
             className="lg:col-span-3 rounded-3xl border border-border bg-card p-8 shadow-card"
-            onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+            onSubmit={(e) => {
+              e.preventDefault();
+              const fd = new FormData(e.currentTarget);
+              const name = String(fd.get("name") || "");
+              const email = String(fd.get("email") || "");
+              const phone = String(fd.get("phone") || "");
+              const location = String(fd.get("location") || "");
+              const message = String(fd.get("message") || "");
+              const subject = `Upit s weba — ${name}`;
+              const body = `Ime: ${name}\nEmail: ${email}\nTelefon: ${phone}\nLokacija: ${location}\n\nPoruka:\n${message}`;
+              window.location.href = `mailto:selmanajna@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+              setSent(true);
+            }}
           >
             <h2 className="font-display text-2xl font-bold text-brand-dark">Pošaljite upit</h2>
             <p className="mt-1 text-sm text-muted-foreground">Odgovorit ćemo s prijedlogom suradnje.</p>

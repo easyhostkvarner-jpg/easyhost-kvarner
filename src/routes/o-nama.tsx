@@ -32,10 +32,13 @@ function ONamaPage() {
             <span className="inline-block rounded-full bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-dark">O nama</span>
             <h1 className="mt-5 font-display text-4xl font-bold text-brand-dark sm:text-5xl">Lokalni tim koji razumije Kvarner.</h1>
             <p className="mt-5 text-lg text-foreground/80">
-              EasyHost Kvarner nastao je s ciljem da vlasnicima smještaja omogući bezbrižno iznajmljivanje uz vrhunsku uslugu za goste.
+              Lokalni smo tim s višegodišnjim iskustvom u turizmu i smještaju.
             </p>
             <p className="mt-3 text-foreground/80">
-              Znamo koliko detalji čine razliku — od prve komunikacije s gostom do savršeno pripremljenog apartmana. Naš pristup temelji se na povjerenju, transparentnosti i stalnom unapređenju kvalitete.
+              Poznajemo svaki kutak Kvarnera i razumijemo što gosti traže, a što vlasnicima znači sigurnost.
+            </p>
+            <p className="mt-3 text-foreground/80">
+              Naša misija je pružiti bezbrižno iskustvo — da svaki vlasnik zna da je njegov objekt u pouzdanim rukama.
             </p>
             <p className="mt-6 font-script text-3xl text-brand">„Vi uživajte u prihodima, mi u detaljima."</p>
           </div>
