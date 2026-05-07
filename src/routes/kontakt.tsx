@@ -23,6 +23,9 @@ export const Route = createFileRoute("/kontakt")({
 
 function KontaktPage() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
   return (
     <Layout>
       <section className="bg-sand/40 py-20">
@@ -65,19 +68,27 @@ function KontaktPage() {
           </div>
 
           <form
+            ref={formRef}
             className="lg:col-span-3 rounded-3xl border border-border bg-card p-8 shadow-card"
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
-              const fd = new FormData(e.currentTarget);
-              const name = String(fd.get("name") || "");
-              const email = String(fd.get("email") || "");
-              const phone = String(fd.get("phone") || "");
-              const location = String(fd.get("location") || "");
-              const message = String(fd.get("message") || "");
-              const subject = `Upit s weba — ${name}`;
-              const body = `Ime: ${name}\nEmail: ${email}\nTelefon: ${phone}\nLokacija: ${location}\n\nPoruka:\n${message}`;
-              window.location.href = `mailto:selmanajna@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-              setSent(true);
+              if (!formRef.current) return;
+              setSending(true);
+              setError(null);
+              try {
+                await emailjs.sendForm(
+                  EMAILJS_SERVICE_ID,
+                  EMAILJS_TEMPLATE_ID,
+                  formRef.current,
+                  { publicKey: EMAILJS_PUBLIC_KEY },
+                );
+                setSent(true);
+              } catch (err) {
+                console.error(err);
+                setError("Slanje nije uspjelo. Pokušajte ponovno ili nas kontaktirajte direktno.");
+              } finally {
+                setSending(false);
+              }
             }}
           >
             <h2 className="font-display text-2xl font-bold text-brand-dark">Pošaljite upit</h2>
