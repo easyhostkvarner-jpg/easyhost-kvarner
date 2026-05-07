@@ -4,10 +4,10 @@ import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-// EmailJS konfiguracija — zamijenite ovim vrijednostima iz vašeg EmailJS dashboarda (https://dashboard.emailjs.com)
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+
+const EMAILJS_SERVICE_ID = "service_wuhszld";
+const EMAILJS_TEMPLATE_ID = "template_k6rxb2i";
+const EMAILJS_PUBLIC_KEY = "W5lNlLq03FAmz8UbI";
 
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
