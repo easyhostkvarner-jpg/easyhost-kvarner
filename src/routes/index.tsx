@@ -218,10 +218,14 @@ function Index() {
       </section>
 
       {/* ZA KOGA JE */}
-      <section className="bg-sand/50">
+      <section className="relative overflow-hidden bg-sand/50">
+        <div className="blob blob-brand right-0 top-10 h-72 w-72 opacity-25" />
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-20 lg:grid-cols-2 lg:items-center lg:px-8">
-          <div className="overflow-hidden rounded-2xl shadow-soft">
-            <img src={keysImg} alt="Ključ apartmana" className="h-[420px] w-full object-cover" width={1024} height={1280} loading="lazy" />
+          <div className="group relative">
+            <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-brand/30 to-brand-dark/20 blur-2xl opacity-50" />
+            <div className="relative overflow-hidden rounded-3xl shadow-glow ring-1 ring-white/40">
+              <img src={keysImg} alt="Ključ apartmana" className="h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-105" width={1024} height={1280} loading="lazy" />
+            </div>
           </div>
           <div>
             <h2 className="font-display text-sm font-bold uppercase tracking-[0.2em] text-brand-dark">Za koga je naša usluga</h2>
@@ -232,9 +236,11 @@ function Index() {
                 "Za vlasnike koji žele povećati prihode i ocjene",
                 "Za sve koji žele profesionalan pristup bez brige",
               ].map((t) => (
-                <li key={t} className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 shrink-0 text-brand" size={20} />
-                  <span className="text-foreground/85">{t}</span>
+                <li key={t} className="flex items-start gap-3 rounded-xl bg-white/40 p-3 backdrop-blur-sm transition-colors hover:bg-white/70">
+                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand text-white shadow-soft">
+                    <CheckCircle2 size={14} />
+                  </span>
+                  <span className="text-foreground/90">{t}</span>
                 </li>
               ))}
             </ul>
@@ -243,13 +249,16 @@ function Index() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-background py-20">
+      <section className="relative bg-background py-20">
+        <div className="absolute inset-0 -z-10 grid-fade opacity-40" />
         <div className="mx-auto max-w-3xl px-4 lg:px-8">
           <div className="text-center">
             <h2 className="font-display text-sm font-bold uppercase tracking-[0.2em] text-brand">FAQ</h2>
-            <p className="mt-2 font-display text-3xl font-bold text-brand-dark sm:text-4xl">Često postavljana pitanja</p>
+            <p className="mt-2 font-display text-3xl font-bold sm:text-4xl">
+              <span className="gradient-text">Često postavljana pitanja</span>
+            </p>
           </div>
-          <div className="mt-10 space-y-4">
+          <div className="mt-10 space-y-3">
             {[
               { q: "Što je sve uključeno u vaše usluge?", a: "Sve od komunikacije s gostima, prijave u eVisitor, čišćenja i vođenja evidencije, do izdavanja računa." },
               { q: "Moram li biti prisutan kod dolaska gostiju?", a: "Ne — naš tim preuzima cijeli proces check-ina i check-outa." },
@@ -257,10 +266,10 @@ function Index() {
               { q: "Na kojem području radite?", a: "Pokrivamo cijeli Kvarner i dio Istre (Opatija, Ičići, Lovran, Mošćenička Draga, Matulji…)." },
               { q: "Koliko brzo možete preuzeti novi objekt?", a: "U pravilu unutar 7 dana od dogovora i potpisivanja ugovora." },
             ].map((f, i) => (
-              <details key={i} className="group rounded-2xl border border-border bg-card p-6 shadow-card open:shadow-soft">
+              <details key={i} className="group rounded-2xl border border-border/70 bg-card p-6 shadow-card transition-all open:border-brand/30 open:shadow-glow hover:-translate-y-0.5">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
                   <span className="font-display font-semibold text-brand-dark">{f.q}</span>
-                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-brand/10 text-brand transition-transform group-open:rotate-45">+</span>
+                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-brand/10 text-brand transition-all group-open:rotate-45 group-open:bg-brand group-open:text-white">+</span>
                 </summary>
                 <p className="mt-4 text-muted-foreground">{f.a}</p>
               </details>
@@ -272,15 +281,17 @@ function Index() {
       {/* CTA */}
       <section className="relative overflow-hidden gradient-cta">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
-        <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-6 px-4 py-16 text-center lg:flex-row lg:justify-between lg:text-left lg:px-8">
+        <div className="blob blob-sand -left-20 top-0 h-72 w-72 opacity-30" />
+        <div className="blob blob-sand right-0 bottom-0 h-72 w-72 opacity-30" style={{ animationDelay: "-6s" }} />
+        <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-6 px-4 py-20 text-center lg:flex-row lg:justify-between lg:text-left lg:px-8">
           <div>
-            <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
               Želite bezbrižno iznajmljivanje i bolje rezultate?
             </h2>
-            <p className="mt-2 text-white/85">Prepustite upravljanje profesionalcima.</p>
+            <p className="mt-3 text-white/90">Prepustite upravljanje profesionalcima.</p>
           </div>
-          <Link to="/kontakt" className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-brand-dark shadow-xl transition-transform hover:scale-105">
-            Zatražite ponudu <ArrowRight size={16} />
+          <Link to="/kontakt" className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-brand-dark shadow-xl transition-all hover:scale-[1.04] hover:shadow-2xl">
+            Zatražite ponudu <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
       </section>
