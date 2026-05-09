@@ -167,8 +167,11 @@ function Index() {
               ))}
             </ul>
           </div>
-          <div className="overflow-hidden rounded-2xl shadow-soft lg:col-span-1">
-            <img src={interiorImg} alt="Mediteranski interijer" className="h-full w-full object-cover" width={1280} height={896} loading="lazy" />
+          <div className="group relative lg:col-span-1">
+            <div className="absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-brand/30 to-brand-dark/20 blur-2xl opacity-50" />
+            <div className="relative overflow-hidden rounded-3xl shadow-glow ring-1 ring-white/40">
+              <img src={interiorImg} alt="Mediteranski interijer" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" width={1280} height={896} loading="lazy" />
+            </div>
           </div>
           <div className="text-center lg:text-left">
             <p className="font-script text-3xl leading-tight text-brand-dark sm:text-4xl">
@@ -180,24 +183,33 @@ function Index() {
       </section>
 
       {/* KAKO FUNKCIONIRA */}
-      <section className="bg-background py-20">
+      <section className="relative bg-background py-20">
+        <div className="absolute inset-0 -z-10 grid-fade opacity-50" />
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="text-center">
             <h2 className="font-display text-sm font-bold uppercase tracking-[0.2em] text-brand">Kako funkcionira suradnja</h2>
-            <p className="mt-3 font-display text-3xl font-bold text-brand-dark sm:text-4xl">Tri jednostavna koraka</p>
+            <p className="mt-3 font-display text-3xl font-bold sm:text-4xl">
+              <span className="gradient-text">Tri jednostavna koraka</span>
+            </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
               { n: "1", t: "Upoznavanje i analiza", d: "Pregledavamo vaš smještaj i dogovaramo ciljeve suradnje." },
               { n: "2", t: "Preuzimanje upravljanja", d: "Preuzimamo komunikaciju, rezervacije, organizaciju i operativni dio." },
               { n: "3", t: "Kontinuirana briga i rast", d: "Radimo na boljim ocjenama, većoj popunjenosti i zadovoljstvu gostiju." },
-            ].map((s) => (
-              <div key={s.n} className="relative rounded-2xl border border-border bg-card p-8 shadow-card">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full gradient-cta text-lg font-bold text-white shadow-soft">
+            ].map((s, idx) => (
+              <div key={s.n} className="group relative overflow-hidden rounded-3xl border border-border/70 bg-card p-8 shadow-card transition-all hover:-translate-y-1.5 hover:shadow-glow">
+                <span className="pointer-events-none absolute -right-6 -top-6 font-display text-[7rem] font-black leading-none text-brand/5 transition-colors group-hover:text-brand/10">
+                  {s.n}
+                </span>
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-2xl gradient-cta text-lg font-bold text-white shadow-soft">
                   {s.n}
                 </div>
-                <h3 className="mt-5 font-display text-xl font-bold text-brand-dark">{s.t}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
+                <h3 className="relative mt-5 font-display text-xl font-bold text-brand-dark">{s.t}</h3>
+                <p className="relative mt-2 text-sm text-muted-foreground">{s.d}</p>
+                {idx < 2 && (
+                  <div className="absolute right-4 top-1/2 hidden h-px w-10 -translate-y-1/2 bg-gradient-to-r from-brand/40 to-transparent md:block" />
+                )}
               </div>
             ))}
           </div>
