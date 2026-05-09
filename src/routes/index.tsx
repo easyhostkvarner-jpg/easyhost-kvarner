@@ -38,26 +38,60 @@ function Index() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <img src={heroImg} alt="Mediteranski apartman s pogledom na Kvarner" className="h-full w-full object-cover" width={1920} height={1280} />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/75 to-background/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         </div>
+        <div className="blob blob-brand -left-24 top-10 h-72 w-72" />
+        <div className="blob blob-sand right-0 top-40 h-80 w-80" style={{ animationDelay: "-4s" }} />
+
         <div className="mx-auto max-w-7xl px-4 py-24 lg:px-8 lg:py-36">
-          <div className="max-w-2xl">
-            <span className="inline-block rounded-full bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-dark">
+          <div className="max-w-2xl reveal-up">
+            <span className="inline-flex items-center gap-2 rounded-full glass-card px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-dark ring-brand-soft">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand" />
+              </span>
               Kvarner & Istra
             </span>
-            <h1 className="mt-6 font-display text-4xl font-bold leading-[1.1] text-brand-dark sm:text-5xl lg:text-6xl">
-              Jednostavno upravljanje smještajem na Kvarneru
+            <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-brand-dark sm:text-5xl lg:text-[4rem]">
+              Jednostavno upravljanje{" "}
+              <span className="gradient-text">smještajem</span> na Kvarneru
             </h1>
             <p className="mt-6 max-w-xl text-lg text-foreground/80">
               Brinemo o vašim apartmanima i kućama za odmor – od prijave gostiju, prijave u eVisitor, čišćenja i posteljine – vi uživate, a mi radimo.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/kontakt" className="inline-flex items-center gap-2 rounded-full gradient-cta px-7 py-3.5 text-sm font-semibold text-white shadow-soft transition-transform hover:scale-105">
-                Zatražite ponudu <ArrowRight size={16} />
+              <Link to="/kontakt" className="group inline-flex items-center gap-2 rounded-full gradient-cta px-7 py-3.5 text-sm font-semibold text-white shadow-glow transition-all hover:scale-[1.03]">
+                Zatražite ponudu <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
-              <Link to="/usluge" className="inline-flex items-center rounded-full border-2 border-brand-dark/20 bg-white/80 px-7 py-3.5 text-sm font-semibold text-brand-dark backdrop-blur transition-colors hover:bg-white">
+              <Link to="/usluge" className="inline-flex items-center rounded-full glass-card px-7 py-3.5 text-sm font-semibold text-brand-dark transition-colors hover:bg-white">
                 Saznajte više
               </Link>
+            </div>
+
+            {/* Floating stat row */}
+            <div className="mt-10 flex flex-wrap gap-3">
+              <div className="glass-card rounded-2xl px-4 py-3 shadow-card">
+                <div className="flex items-center gap-2 text-brand-dark">
+                  <Star size={16} className="fill-brand text-brand" />
+                  <span className="font-display text-sm font-bold">4.9★</span>
+                </div>
+                <p className="mt-0.5 text-[11px] text-muted-foreground">prosjek ocjena gostiju</p>
+              </div>
+              <div className="glass-card rounded-2xl px-4 py-3 shadow-card">
+                <div className="flex items-center gap-2 text-brand-dark">
+                  <TrendingUp size={16} className="text-brand" />
+                  <span className="font-display text-sm font-bold">+30%</span>
+                </div>
+                <p className="mt-0.5 text-[11px] text-muted-foreground">veća popunjenost</p>
+              </div>
+              <div className="glass-card rounded-2xl px-4 py-3 shadow-card">
+                <div className="flex items-center gap-2 text-brand-dark">
+                  <ShieldCheck size={16} className="text-brand" />
+                  <span className="font-display text-sm font-bold">24/7</span>
+                </div>
+                <p className="mt-0.5 text-[11px] text-muted-foreground">briga bez stresa</p>
+              </div>
             </div>
           </div>
         </div>
