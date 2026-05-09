@@ -98,9 +98,10 @@ function Index() {
       </section>
 
       {/* ŠTO RADIMO */}
-      <section className="bg-sand/40">
+      <section className="relative overflow-hidden bg-sand/40">
+        <div className="blob blob-brand -top-20 right-10 h-64 w-64 opacity-30" />
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-20 lg:grid-cols-2 lg:items-center lg:px-8">
-          <div>
+          <div className="relative">
             <div className="flex items-center gap-3">
               <KeyRound className="text-brand" />
               <h2 className="font-display text-sm font-bold uppercase tracking-[0.2em] text-brand-dark">Što radimo</h2>
@@ -111,24 +112,31 @@ function Index() {
             <p className="mt-4 font-semibold text-brand-dark">Naš cilj je jednostavan:</p>
             <p className="text-foreground/85">bezbrižno iznajmljivanje za vlasnike i vrhunsko iskustvo za goste.</p>
           </div>
-          <div className="overflow-hidden rounded-2xl shadow-soft">
-            <img src={towelsImg} alt="Svježa posteljina i ručnici" className="h-full w-full object-cover" width={1280} height={896} loading="lazy" />
+          <div className="group relative">
+            <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-brand/30 to-brand-dark/20 blur-2xl opacity-60 transition-opacity group-hover:opacity-90" />
+            <div className="relative overflow-hidden rounded-3xl shadow-glow ring-1 ring-white/40">
+              <img src={towelsImg} alt="Svježa posteljina i ručnici" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" width={1280} height={896} loading="lazy" />
+            </div>
           </div>
         </div>
       </section>
 
       {/* USLUGE */}
-      <section className="bg-background py-20">
+      <section className="relative bg-background py-20">
+        <div className="absolute inset-0 -z-10 grid-fade opacity-60" />
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="text-center">
             <h2 className="font-display text-sm font-bold uppercase tracking-[0.2em] text-brand">Naše usluge</h2>
-            <p className="mt-3 font-display text-3xl font-bold text-brand-dark sm:text-4xl">Sve na jednom mjestu</p>
+            <p className="mt-3 font-display text-3xl font-bold sm:text-4xl">
+              <span className="gradient-text">Sve na jednom mjestu</span>
+            </p>
             <p className="mt-2 text-muted-foreground">Jednostavno, pouzdano i profesionalno.</p>
           </div>
           <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
             {services.map((s) => (
-              <div key={s.title} className="group rounded-2xl border border-border bg-card p-5 text-center shadow-card transition-all hover:-translate-y-1 hover:border-brand/40 hover:shadow-soft">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 text-brand transition-colors group-hover:bg-brand group-hover:text-white">
+              <div key={s.title} className="group relative overflow-hidden rounded-2xl border border-border/70 bg-card p-5 text-center shadow-card transition-all hover:-translate-y-1.5 hover:border-brand/40 hover:shadow-glow">
+                <div className="absolute inset-x-0 -top-px mx-auto h-px w-2/3 bg-gradient-to-r from-transparent via-brand/60 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 text-brand transition-all group-hover:scale-110 group-hover:bg-brand group-hover:text-white group-hover:shadow-soft">
                   <s.icon size={22} />
                 </div>
                 <h3 className="mt-4 text-sm font-semibold leading-tight text-brand-dark">{s.title}</h3>
