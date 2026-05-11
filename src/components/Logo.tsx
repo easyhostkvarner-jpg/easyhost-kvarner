@@ -7,9 +7,9 @@ export function Logo({ className = "" }: { className?: string }) {
       <img
         src={logo}
         alt="EasyHost Kvarner"
-        className="h-16 w-auto object-contain sm:h-20 mix-blend-multiply"
-        width={320}
-        height={80}
+        className="h-20 w-auto object-contain sm:h-28 mix-blend-multiply"
+        width={420}
+        height={112}
       />
     </Link>
   );
