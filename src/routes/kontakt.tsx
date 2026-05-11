@@ -41,7 +41,7 @@ function KontaktPage() {
           <div className="lg:col-span-2 space-y-4">
             {[
               { icon: Phone, t: "Telefon", v: "+385 99 123 4567", href: "tel:+385991234567" },
-              { icon: Mail, t: "Email", v: "selmanajna@gmail.com", href: "mailto:selmanajna@gmail.com" },
+              { icon: Mail, t: "Email", v: "easyhost.kvarner@gmail.com", href: "mailto:selmanajna@gmail.com" },
               { icon: MapPin, t: "Lokacija", v: "Kvarner & Istra" },
             ].map((c) => {
               const Inner = (
