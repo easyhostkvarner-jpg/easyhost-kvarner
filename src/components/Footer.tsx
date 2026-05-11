@@ -40,7 +40,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-5 text-xs text-white/60 lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <span>© {new Date().getFullYear()} EasyHost Kvarner. Sva prava pridržana.</span>
-          <span>Obrt za usluge · OIB: 12345678901</span>
+      
         </div>
       </div>
     </footer>
