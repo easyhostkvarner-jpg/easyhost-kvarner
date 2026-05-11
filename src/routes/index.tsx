@@ -88,9 +88,9 @@ function Index() {
               <div className="glass-card rounded-2xl px-4 py-3 shadow-card">
                 <div className="flex items-center gap-2 text-brand-dark">
                   <ShieldCheck size={16} className="text-brand" />
-                  <span className="font-display text-sm font-bold">24/7</span>
+                  <span className="font-display text-sm font-bold">100+</span>
                 </div>
-                <p className="mt-0.5 text-[11px] text-muted-foreground">briga bez stresa</p>
+                <p className="mt-0.5 text-[11px] text-muted-foreground">zadovoljnih gostiju</p>
               </div>
             </div>
           </div>
