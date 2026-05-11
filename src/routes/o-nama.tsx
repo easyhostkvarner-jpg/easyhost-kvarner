@@ -40,7 +40,7 @@ function ONamaPage() {
             <p className="mt-3 text-foreground/80">
               Naša misija je pružiti bezbrižno iskustvo — da svaki vlasnik zna da je njegov objekt u pouzdanim rukama.
             </p>
-            <p className="mt-6 font-script text-3xl text-brand">„Vi uživajte u prihodima, mi u detaljima."</p>
+            <p className="mt-6 font-script text-3xl text-brand">Vi uživajte u prihodima, mi u detaljima.</p>
           </div>
           <div className="overflow-hidden rounded-3xl shadow-soft">
             <img src={interiorImg} alt="Mediteranski interijer" className="h-full w-full object-cover" width={1280} height={896} loading="lazy" />
