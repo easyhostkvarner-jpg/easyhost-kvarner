@@ -175,7 +175,7 @@ function Index() {
           </div>
           <div className="text-center lg:text-left">
             <p className="font-script text-3xl leading-tight text-brand-dark sm:text-4xl">
-              „Vaš smještaj vodimo kao da je naš."
+              Vaš smještaj vodimo kao da je naš.
             </p>
             <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-brand lg:mx-0" />
           </div>
