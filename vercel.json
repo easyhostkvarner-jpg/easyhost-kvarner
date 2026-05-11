@@ -1,9 +1,10 @@
 {
-  "buildCommand": "bun run build",
+  "buildCommand": "bun run build && cp dist/client/_shell.html dist/client/index.html",
   "outputDirectory": "dist/client",
   "framework": null,
   "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
-    { "source": "/(.*)", "destination": "/_shell.html" }
+    { "source": "/((?!assets/|favicon|.*\\..*).*)", "destination": "/_shell.html" }
   ]
 }
