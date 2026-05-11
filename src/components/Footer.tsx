@@ -16,7 +16,7 @@ export function Footer() {
           <h4 className="text-sm font-semibold uppercase tracking-wider text-white/70">Kontakt</h4>
           <ul className="mt-4 space-y-3 text-sm">
             <li className="flex items-center gap-3"><Phone size={16} /> +385 99 123 4567</li>
-            <li className="flex items-center gap-3"><Mail size={16} /> <a href="mailto:selmanajna@gmail.com" className="hover:text-white/80">selmanajna@gmail.com</a></li>
+            <li className="flex items-center gap-3"><Mail size={16} /> <a href="easyhost.kvarner@gmail.com" className="hover:text-white/80">easyhost.kvarner@gmail.com</a></li>
             <li className="flex items-center gap-3"><MapPin size={16} /> Kvarner & Istra</li>
           </ul>
         </div>
