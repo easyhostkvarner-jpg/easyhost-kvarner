@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/logo-key.jpg";
+import logo from "@/assets/logo-key.png";
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
@@ -7,7 +7,7 @@ export function Logo({ className = "" }: { className?: string }) {
       <img
         src={logo}
         alt="EasyHost Kvarner"
-        className="h-20 w-auto object-contain sm:h-28 mix-blend-multiply"
+        className="h-20 w-auto object-contain sm:h-28"
         width={420}
         height={112}
       />
