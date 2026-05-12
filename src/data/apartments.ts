@@ -100,7 +100,14 @@ import bella16 from "@/assets/apartments/bella16.jpg";
 import bella17 from "@/assets/apartments/bella17.jpg";
 
 
-
+import opatija1 from "@/assets/apartments/opatija1.jpeg";
+import opatija2 from "@/assets/apartments/opatija2.jpeg";
+import opatija3 from "@/assets/apartments/opatija3.jpeg";
+import opatija4 from "@/assets/apartments/opatija4.jpeg";
+import opatija5 from "@/assets/apartments/opatija5.jpeg";
+import opatija6 from "@/assets/apartments/opatija6.jpeg";
+import opatija7 from "@/assets/apartments/opatija7.jpeg";
+import opatija8 from "@/assets/apartments/opatija8.jpeg";
 
 export type Apartment = {
   slug: string;
@@ -310,7 +317,7 @@ export const apartments: Apartment[] = [
       "Blizina centra Opatije",
     ],
     mainImage: opatijaSeaView,
-    gallery: [opatijaSeaView, interiorLiving, towels, keys],
+    gallery: [opatijaSeaView,opatija1, opatija2, opatija3, opatija4, opatija5, opatija6, opatija7, opatija8],
     seoTitle:
       "Apartman Opatija 2+1 s pogledom na more | Smještaj u centru",
     seoDescription:
