@@ -53,7 +53,7 @@ export const apartments: Apartment[] = [
       "Prostran apartman s 2 spavaće sobe, 3 kupaone i terasom s pogledom na more.",
     bedrooms: 2,
     bathrooms: 3,
-    capacity: "do 6 osoba",
+    capacity: "do 4 osobe",
     features: [
       "2 spavaće sobe",
       "Dnevni boravak",
