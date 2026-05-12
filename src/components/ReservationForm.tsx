@@ -3,9 +3,9 @@ import emailjs from "@emailjs/browser";
 import { CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
 // TODO: Zamijenite svojim EmailJS podacima
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+const EMAILJS_SERVICE_ID = "service_lbpea5o";
+const EMAILJS_TEMPLATE_ID = "template_jvbbuu7";
+const EMAILJS_PUBLIC_KEY = "W5lNlLq03FAmz8UbI";
 
 type Status = "idle" | "sending" | "success" | "error";
 
