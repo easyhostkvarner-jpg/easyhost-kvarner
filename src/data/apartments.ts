@@ -20,7 +20,7 @@ import doraSoba3 from  "@/assets/apartments/villa-alternus-app-dora-soba3.jpeg";
 import doraSoba4 from  "@/assets/apartments/villa-alternus-app-dora-soba4.jpeg";
 import doraStol from  "@/assets/apartments/villa-alternus-app-dora-stol.jpeg";
 import doraWc from  "@/assets/apartments/villa-alternus-app-dora-wc.jpeg";
-import doraWc from  "@/assets/apartments/villa-alternus-app-dora-wc1.jpeg";
+import doraWc1 from  "@/assets/apartments/villa-alternus-app-dora-wc1.jpeg";
 
 
 
