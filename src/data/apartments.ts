@@ -65,7 +65,21 @@ import aria16 from  "@/assets/apartments/aria-soba2.jpeg";
 import aria17 from  "@/assets/apartments/aria-balkon1.jpeg";
 import aria18 from  "@/assets/apartments/aria-wc1.jpeg";
 
-
+import lea1 from  "@/assets/apartments/lea1.jpeg";
+import lea2 from  "@/assets/apartments/lea2.jpeg";
+import lea3 from  "@/assets/apartments/lea3.jpeg";
+import lea4 from  "@/assets/apartments/lea4.jpeg";
+import lea5 from  "@/assets/apartments/lea5.jpeg";
+import lea6 from  "@/assets/apartments/lea6.jpeg";
+import lea7 from  "@/assets/apartments/lea7.jpeg";
+import lea8 from  "@/assets/apartments/lea8.jpeg";
+import lea9 from  "@/assets/apartments/lea9.jpeg";
+import lea10 from  "@/assets/apartments/lea10.jpeg";
+import lea11 from  "@/assets/apartments/lea11.jpeg";
+import lea12 from  "@/assets/apartments/lea12.jpeg";
+import lea13 from  "@/assets/apartments/lea13.jpeg";
+import lea14 from  "@/assets/apartments/lea14.jpeg";
+import lea15 from  "@/assets/apartments/lea15.jpeg";
 
 
 
@@ -203,8 +217,8 @@ export const apartments: Apartment[] = [
       "Dijeljeni bazen (3 apartmana)",
       "Dječje igralište",
     ],
-    mainImage: villaOleandarPool,
-    gallery: [villaOleandarPool, villaAlternus2, interiorLiving, opatijaSeaView],
+    mainImage: lea6,
+    gallery: [villaOleandarPool, lea1, lea2,lea3, lea4, lea5, , lea7,lea8, le9, lea10,lea11, lea12, lea13, lea14, lea15],
     seoTitle:
       "Apartman Lea — Villa Oleandar | Bazen i obiteljski smještaj",
     seoDescription:
