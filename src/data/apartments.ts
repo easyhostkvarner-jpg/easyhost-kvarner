@@ -81,7 +81,23 @@ import lea13 from  "@/assets/apartments/lea13.jpeg";
 import lea14 from  "@/assets/apartments/lea14.jpeg";
 import lea15 from  "@/assets/apartments/lea15.jpeg";
 
-
+import bella1 from "@/assets/apartments/bella1.jpg";
+import bella2 from "@/assets/apartments/bella2.jpg";
+import bella3 from "@/assets/apartments/bella3.jpg";
+import bella4 from "@/assets/apartments/bella4.jpg";
+import bella5 from "@/assets/apartments/bella5.jpg";
+import bella6 from "@/assets/apartments/bella6.jpg";
+import bella7 from "@/assets/apartments/bella7.jpg";
+import bella8 from "@/assets/apartments/bella8.jpg";
+import bella9 from "@/assets/apartments/bella9.jpg";
+import bella10 from "@/assets/apartments/bella10.jpg";
+import bella11 from "@/assets/apartments/bella11.jpg";
+import bella12 from "@/assets/apartments/bella12.jpg";
+import bella13 from "@/assets/apartments/bella13.jpg";
+import bella14 from "@/assets/apartments/bella14.jpg";
+import bella15 from "@/assets/apartments/bella15.jpg";
+import bella16 from "@/assets/apartments/bella16.jpg";
+import bella17 from "@/assets/apartments/bella17.jpg";
 
 
 
@@ -247,8 +263,24 @@ export const apartments: Apartment[] = [
       "Parking",
       "Mirna lokacija",
     ],
-    mainImage: interior,
-    gallery: [interior, villaOleandarPool, towels, keys],
+    mainImage: bella4,
+    gallery: [ bella1,
+  bella2,
+  bella3,
+  bella4,
+  bella5,
+  bella6,
+  bella7,
+  bella8,
+  bella9,
+  bella10,
+  bella11,
+  bella12,
+  bella13,
+  bella14,
+  bella15,
+  bella16,
+  bella17,],
     seoTitle:
       "Apartman Bella — Villa Oleandar | Mirna oaza iznad Opatije",
     seoDescription:
