@@ -6,7 +6,7 @@ import opatijaSeaView from "@/assets/apartments/opatija-sea-view.jpg";
 import towels from "@/assets/towels.jpg";
 import interior from "@/assets/interior.jpg";
 import keys from "@/assets/keys.jpg";
-import doraBalkon from  "@/assets/apartments/villa-alternus-app-dora-balkon.jpg";
+import doraBalkon from  "@/assets/apartments/villa-alternus-app-dora-balkon.jpeg";
 
 
 export type Apartment = {
