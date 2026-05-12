@@ -47,7 +47,7 @@ import aWc4 from  "@/assets/apartments/app-a-wc4.jpeg";
 
 
 import aria1 from  "@/assets/apartments/aria-bazen1.jpeg";
-import aria2 from  "@/assets/apartments/arria-bazen2.jpeg";
+import aria2 from  "@/assets/apartments/aria-bazen2.jpeg";
 import aria3 from  "@/assets/apartments/aria-dvoriste.jpeg";
 import aria4 from  "@/assets/apartments/aria-dvoriste1.jpeg";
 import aria5 from  "@/assets/apartments/aria-soba1.jpeg";
