@@ -22,6 +22,34 @@ import doraStol from  "@/assets/apartments/villa-alternus-app-dora-stol.jpeg";
 import doraWc from  "@/assets/apartments/villa-alternus-app-dora-wc.jpeg";
 import doraWc1 from  "@/assets/apartments/villa-alternus-app-dora-wc1.jpeg";
 
+import aBazen1 from  "@/assets/apartments/app-a-bazen1.jpeg";
+import aBazen2 from  "@/assets/apartments/app-a-bazen2.jpeg";
+import aBazen3 from  "@/assets/apartments/app-a-bazen3.jpeg";
+import aBazen4 from  "@/assets/apartments/app-a-bazen4.jpeg";
+import aDnevni from  "@/assets/apartments/app-a-dnevni.jpeg";
+import aDnevni1 from  "@/assets/apartments/app-a-dnevni1.jpeg";
+import aDnevni2 from  "@/assets/apartments/app-a-dnevni2.jpeg";
+import aHrana from  "@/assets/apartments/app-a-hrana.jpeg";
+import aKuhinja from  "@/assets/apartments/app-a-kuhinja.jpeg";
+import aKuhinja1 from  "@/assets/apartments/app-a-kuhinja1.jpeg";
+import aKuhinja2 from  "@/assets/apartments/app-a-kuhinja2.jpeg";
+import aSoba1 from  "@/assets/apartments/app-a-soba1.jpeg";
+import aSoba2 from  "@/assets/apartments/app-a-soba2.jpeg";
+import aSoba3 from  "@/assets/apartments/app-a-soba3.jpeg";
+import aSoba4 from  "@/assets/apartments/app-a-soba4.jpeg";
+import aStol from  "@/assets/apartments/app-a-stol.jpeg";
+import aVilla from  "@/assets/apartments/app-a-villa.jpeg";
+import aVilla1 from  "@/assets/apartments/app-a-villa1.jpeg";
+import aWc1 from  "@/assets/apartments/app-a-wc1.jpeg";
+import aWc2 from  "@/assets/apartments/app-a-wc2.jpeg";
+import aWc3 from  "@/assets/apartments/app-a-wc3.jpeg";
+import aWc4 from  "@/assets/apartments/app-a-wc4.jpeg";
+
+
+
+
+
+
 
 
 
@@ -96,7 +124,7 @@ export const apartments: Apartment[] = [
       "Parking",
     ],
     mainImage: villaAlternus2,
-    gallery: [villaAlternus2, villaAlternus1],
+    gallery: [villaAlternus2, villaAlternus1, aBazen1, aBazen2, aBazen3, aBazen4, aDnevni, aDnevni1, aDnevni2, aHrana, aKuhinja, aKuhinja1, aKuhinja2, aSoba1, aSoba2, aSoba3, aSoba4, aStol, aVilla, aVilla1, aWc1, aWc2,aWc3, aWc4],
     seoTitle:
       "Apartman A — Villa Alternus, Veprinac | 3 spavaće sobe i bazen",
     seoDescription:
