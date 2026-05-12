@@ -108,6 +108,7 @@ import opatija5 from "@/assets/apartments/opatija5.jpeg";
 import opatija6 from "@/assets/apartments/opatija6.jpeg";
 import opatija7 from "@/assets/apartments/opatija7.jpeg";
 import opatija8 from "@/assets/apartments/opatija8.jpeg";
+import opatija9 from "@/assets/apartments/opatija9.jpeg";
 
 export type Apartment = {
   slug: string;
