@@ -6,7 +6,23 @@ import opatijaSeaView from "@/assets/apartments/opatija-sea-view.jpg";
 import towels from "@/assets/towels.jpg";
 import interior from "@/assets/interior.jpg";
 import keys from "@/assets/keys.jpg";
+import doraBazen from  "@/assets/apartments/villa-alternus-app-dora-bazen.jpeg";
+import doraBazen1 from  "@/assets/apartments/villa-alternus-app-dora-bazen1.jpeg";
 import doraBalkon from  "@/assets/apartments/villa-alternus-app-dora-balkon.jpeg";
+import doraBazen2 from  "@/assets/apartments/villa-alternus-app-dora-bazen2.jpeg";
+import doraBazen3 from  "@/assets/apartments/villa-alternus-app-dora-bazen3.jpeg";
+import doraDnevni from  "@/assets/apartments/villa-alternus-app-dora-dnevni.jpeg";
+import doraDnevni1 from  "@/assets/apartments/villa-alternus-app-dora-dnevni1.jpeg";
+import doraKuhinja from  "@/assets/apartments/villa-alternus-app-dora-kuhinja.jpeg";
+import doraSoba1 from  "@/assets/apartments/villa-alternus-app-dora-soba1.jpeg";
+import doraSoba2 from  "@/assets/apartments/villa-alternus-app-dora-soba2.jpeg";
+import doraSoba3 from  "@/assets/apartments/villa-alternus-app-dora-soba3.jpeg";
+import doraSoba4 from  "@/assets/apartments/villa-alternus-app-dora-soba4.jpeg";
+import doraStol from  "@/assets/apartments/villa-alternus-app-dora-stol.jpeg";
+import doraWc from  "@/assets/apartments/villa-alternus-app-dora-wc.jpeg";
+import doraWc from  "@/assets/apartments/villa-alternus-app-dora-wc1.jpeg";
+
+
 
 
 export type Apartment = {
@@ -79,7 +95,8 @@ export const apartments: Apartment[] = [
       "Parking",
     ],
     mainImage: villaAlternus2,
-    gallery: [villaAlternus2, villaAlternus1, interiorLiving, opatijaSeaView],
+    gallery: [villaAlternus2, villaAlternus1, doraBazen, doraBazen1, doraBalkon,
+             doraBazen2, doraBazen3, doraDnevni, doraDnevni1, doraKuhinja, doraSoba1, doraSoba2, doraSoba3, doraSoba4, doraStol, doraWc, doraWc1],
     seoTitle:
       "Apartman A — Villa Alternus, Veprinac | 3 spavaće sobe i bazen",
     seoDescription:
