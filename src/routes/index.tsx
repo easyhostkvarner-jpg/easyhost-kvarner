@@ -1,10 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { Calendar, Users, MessageCircle, Sparkles, BedDouble, ShieldCheck, FileText, Wrench, BarChart3, KeyRound, CheckCircle2, ArrowRight, Star, TrendingUp } from "lucide-react";
+import { Calendar, Users, MessageCircle, Sparkles, BedDouble, ShieldCheck, FileText, Wrench, BarChart3, KeyRound, CheckCircle2, ArrowRight, Star, TrendingUp, Home } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
 import towelsImg from "@/assets/towels.jpg";
 import interiorImg from "@/assets/interior.jpg";
 import keysImg from "@/assets/keys.jpg";
+import { apartments } from "@/data/apartments";
+import { ApartmentCard } from "@/components/ApartmentCard";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -64,6 +66,9 @@ function Index() {
               <Link to="/kontakt" className="group inline-flex items-center gap-2 rounded-full gradient-cta px-7 py-3.5 text-sm font-semibold text-white shadow-glow transition-all hover:scale-[1.03]">
                 Zatražite ponudu <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
+              <a href="#apartmani" className="inline-flex items-center gap-2 rounded-full bg-white/90 px-7 py-3.5 text-sm font-semibold text-brand-dark shadow-card ring-1 ring-brand/20 backdrop-blur-md transition-all hover:scale-[1.03] hover:bg-white">
+                <Home size={16} /> Pogledaj apartmane
+              </a>
               <Link to="/usluge" className="inline-flex items-center rounded-full glass-card px-7 py-3.5 text-sm font-semibold text-brand-dark transition-colors hover:bg-white">
                 Saznajte više
               </Link>
@@ -142,6 +147,25 @@ function Index() {
                 <h3 className="mt-4 text-sm font-semibold leading-tight text-brand-dark">{s.title}</h3>
                 <p className="mt-1 text-xs text-muted-foreground">{s.text}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* APARTMANI */}
+      <section id="apartmani" className="relative bg-background py-20">
+        <div className="absolute inset-0 -z-10 grid-fade opacity-40" />
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="text-center">
+            <h2 className="font-display text-sm font-bold uppercase tracking-[0.2em] text-brand">Naši apartmani</h2>
+            <p className="mt-3 font-display text-3xl font-bold sm:text-4xl">
+              <span className="gradient-text">Pronađite svoj smještaj</span>
+            </p>
+            <p className="mt-2 text-muted-foreground">Pažljivo odabrani apartmani na Kvarneru — od mirnog Veprinca do srca Opatije.</p>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {apartments.map((a) => (
+              <ApartmentCard key={a.slug} apartment={a} />
             ))}
           </div>
         </div>
