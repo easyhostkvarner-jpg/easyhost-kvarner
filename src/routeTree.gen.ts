@@ -14,6 +14,7 @@ import { Route as ONamaRouteImport } from './routes/o-nama'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as KakoFunkcioniraRouteImport } from './routes/kako-funkcionira'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApartmaniSlugRouteImport } from './routes/apartmani.$slug'
 
 const UslugeRoute = UslugeRouteImport.update({
   id: '/usluge',
@@ -40,6 +41,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApartmaniSlugRoute = ApartmaniSlugRouteImport.update({
+  id: '/apartmani/$slug',
+  path: '/apartmani/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +53,7 @@ export interface FileRoutesByFullPath {
   '/kontakt': typeof KontaktRoute
   '/o-nama': typeof ONamaRoute
   '/usluge': typeof UslugeRoute
+  '/apartmani/$slug': typeof ApartmaniSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +61,7 @@ export interface FileRoutesByTo {
   '/kontakt': typeof KontaktRoute
   '/o-nama': typeof ONamaRoute
   '/usluge': typeof UslugeRoute
+  '/apartmani/$slug': typeof ApartmaniSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,12 +70,25 @@ export interface FileRoutesById {
   '/kontakt': typeof KontaktRoute
   '/o-nama': typeof ONamaRoute
   '/usluge': typeof UslugeRoute
+  '/apartmani/$slug': typeof ApartmaniSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/kako-funkcionira' | '/kontakt' | '/o-nama' | '/usluge'
+  fullPaths:
+    | '/'
+    | '/kako-funkcionira'
+    | '/kontakt'
+    | '/o-nama'
+    | '/usluge'
+    | '/apartmani/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/kako-funkcionira' | '/kontakt' | '/o-nama' | '/usluge'
+  to:
+    | '/'
+    | '/kako-funkcionira'
+    | '/kontakt'
+    | '/o-nama'
+    | '/usluge'
+    | '/apartmani/$slug'
   id:
     | '__root__'
     | '/'
@@ -75,6 +96,7 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/o-nama'
     | '/usluge'
+    | '/apartmani/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -83,6 +105,7 @@ export interface RootRouteChildren {
   KontaktRoute: typeof KontaktRoute
   ONamaRoute: typeof ONamaRoute
   UslugeRoute: typeof UslugeRoute
+  ApartmaniSlugRoute: typeof ApartmaniSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -122,6 +145,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/apartmani/$slug': {
+      id: '/apartmani/$slug'
+      path: '/apartmani/$slug'
+      fullPath: '/apartmani/$slug'
+      preLoaderRoute: typeof ApartmaniSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -131,6 +161,7 @@ const rootRouteChildren: RootRouteChildren = {
   KontaktRoute: KontaktRoute,
   ONamaRoute: ONamaRoute,
   UslugeRoute: UslugeRoute,
+  ApartmaniSlugRoute: ApartmaniSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

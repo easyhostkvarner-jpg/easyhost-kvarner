@@ -1,10 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { Calendar, Users, MessageCircle, Sparkles, BedDouble, ShieldCheck, FileText, Wrench, BarChart3, KeyRound, CheckCircle2, ArrowRight, Star, TrendingUp } from "lucide-react";
+import { Calendar, Users, MessageCircle, Sparkles, BedDouble, ShieldCheck, FileText, Wrench, BarChart3, KeyRound, CheckCircle2, ArrowRight, Star, TrendingUp, Home } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
 import towelsImg from "@/assets/towels.jpg";
 import interiorImg from "@/assets/interior.jpg";
 import keysImg from "@/assets/keys.jpg";
+import { apartments } from "@/data/apartments";
+import { ApartmentCard } from "@/components/ApartmentCard";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -64,6 +66,9 @@ function Index() {
               <Link to="/kontakt" className="group inline-flex items-center gap-2 rounded-full gradient-cta px-7 py-3.5 text-sm font-semibold text-white shadow-glow transition-all hover:scale-[1.03]">
                 Zatražite ponudu <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
+              <a href="#apartmani" className="inline-flex items-center gap-2 rounded-full bg-white/90 px-7 py-3.5 text-sm font-semibold text-brand-dark shadow-card ring-1 ring-brand/20 backdrop-blur-md transition-all hover:scale-[1.03] hover:bg-white">
+                <Home size={16} /> Pogledaj apartmane
+              </a>
               <Link to="/usluge" className="inline-flex items-center rounded-full glass-card px-7 py-3.5 text-sm font-semibold text-brand-dark transition-colors hover:bg-white">
                 Saznajte više
               </Link>
