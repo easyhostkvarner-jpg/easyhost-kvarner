@@ -316,8 +316,8 @@ export const apartments: Apartment[] = [
       "Terasa s pogledom na more",
       "Blizina centra Opatije",
     ],
-    mainImage: opatijaSeaView,
-    gallery: [opatijaSeaView,opatija1, opatija2, opatija3, opatija4, opatija5, opatija6, opatija7, opatija8],
+    mainImage: opatija9,
+    gallery: [opatija9, opatija1, opatija2, opatija3, opatija4, opatija5, opatija6, opatija7, opatija8],
     seoTitle:
       "Apartman Opatija 2+1 s pogledom na more | Smještaj u centru",
     seoDescription:
