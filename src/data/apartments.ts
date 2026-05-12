@@ -47,7 +47,7 @@ export const apartments: Apartment[] = [
       "Parking",
     ],
     mainImage: villaAlternus1,
-    gallery: [villaAlternus1, villaAlternus2, interiorLiving, opatijaSeaView],
+    gallery: [villaAlternus1, villaAlternus2,doraBalkon],
     seoTitle:
       "Apartman Dora — Villa Alternus, Veprinac | Bazen i pogled na more",
     seoDescription:
