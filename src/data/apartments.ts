@@ -63,7 +63,8 @@ export const apartments: Apartment[] = [
       "Parking",
     ],
     mainImage: villaAlternus1,
-    gallery: [villaAlternus1, villaAlternus2,doraBalkon],
+    gallery: [villaAlternus1, villaAlternus2, doraBazen, doraBazen1, doraBalkon,
+             doraBazen2, doraBazen3, doraDnevni, doraDnevni1, doraKuhinja, doraSoba1, doraSoba2, doraSoba3, doraSoba4, doraStol, doraWc, doraWc1 ],
     seoTitle:
       "Apartman Dora — Villa Alternus, Veprinac | Bazen i pogled na more",
     seoDescription:
@@ -95,8 +96,7 @@ export const apartments: Apartment[] = [
       "Parking",
     ],
     mainImage: villaAlternus2,
-    gallery: [villaAlternus2, villaAlternus1, doraBazen, doraBazen1, doraBalkon,
-             doraBazen2, doraBazen3, doraDnevni, doraDnevni1, doraKuhinja, doraSoba1, doraSoba2, doraSoba3, doraSoba4, doraStol, doraWc, doraWc1],
+    gallery: [villaAlternus2, villaAlternus1],
     seoTitle:
       "Apartman A — Villa Alternus, Veprinac | 3 spavaće sobe i bazen",
     seoDescription:
