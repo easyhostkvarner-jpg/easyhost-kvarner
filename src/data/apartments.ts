@@ -218,7 +218,7 @@ export const apartments: Apartment[] = [
       "Dječje igralište",
     ],
     mainImage: lea6,
-    gallery: [villaOleandarPool, lea1, lea2,lea3, lea4, lea5, , lea7,lea8, le9, lea10,lea11, lea12, lea13, lea14, lea15],
+    gallery: [villaOleandarPool, lea1, lea2,lea3, lea4, lea5, lea7,lea8, lea9, lea10,lea11, lea12, lea13, lea14, lea15],
     seoTitle:
       "Apartman Lea — Villa Oleandar | Bazen i obiteljski smještaj",
     seoDescription:
