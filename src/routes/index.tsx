@@ -152,6 +152,25 @@ function Index() {
         </div>
       </section>
 
+      {/* APARTMANI */}
+      <section id="apartmani" className="relative bg-background py-20">
+        <div className="absolute inset-0 -z-10 grid-fade opacity-40" />
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="text-center">
+            <h2 className="font-display text-sm font-bold uppercase tracking-[0.2em] text-brand">Naši apartmani</h2>
+            <p className="mt-3 font-display text-3xl font-bold sm:text-4xl">
+              <span className="gradient-text">Pronađite svoj smještaj</span>
+            </p>
+            <p className="mt-2 text-muted-foreground">Pažljivo odabrani apartmani na Kvarneru — od mirnog Veprinca do srca Opatije.</p>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {apartments.map((a) => (
+              <ApartmentCard key={a.slug} apartment={a} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ZAŠTO ODABRATI NAS */}
       <section className="bg-sand/50">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-20 lg:grid-cols-3 lg:items-center lg:px-8">
