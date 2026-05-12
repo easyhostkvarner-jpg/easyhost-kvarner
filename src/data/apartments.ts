@@ -46,6 +46,25 @@ import aWc3 from  "@/assets/apartments/app-a-wc3.jpeg";
 import aWc4 from  "@/assets/apartments/app-a-wc4.jpeg";
 
 
+import aria1 from  "@/assets/apartments/aria-bazen1.jpeg";
+import aria2 from  "@/assets/apartments/arria-bazen2.jpeg";
+import aria3 from  "@/assets/apartments/aria-dvoriste.jpeg";
+import aria4 from  "@/assets/apartments/aria-dvoriste1.jpeg";
+import aria5 from  "@/assets/apartments/aria-soba1.jpeg";
+import aria6 from  "@/assets/apartments/aria-soba1.jpeg";
+import aria7 from  "@/assets/apartments/aria-bazen3.jpeg";
+import aria8 from  "@/assets/apartments/aria-bazen4.jpeg";
+import aria9 from  "@/assets/apartments/aria-wc.jpeg";
+import aria10 from  "@/assets/apartments/aria-balkon.jpeg";
+import aria11 from  "@/assets/apartments/aria-dnevni.jpeg";
+import aria12 from  "@/assets/apartments/aria-kuhinja.jpeg";
+import aria13 from  "@/assets/apartments/aria-pogled.jpeg";
+import aria14  from  "@/assets/apartments/aria-pogled1.jpeg";
+import aria15 from  "@/assets/apartments/aria-villa.jpeg";
+import aria16 from  "@/assets/apartments/aria-soba2.jpeg";
+import aria17 from  "@/assets/apartments/aria-balkon1.jpeg";
+import aria18 from  "@/assets/apartments/aria-wc1.jpeg";
+
 
 
 
@@ -144,7 +163,7 @@ export const apartments: Apartment[] = [
       "Apartman s 2 spavaće sobe, terasom s pogledom na more i dijeljenim bazenom.",
     bedrooms: 2,
     bathrooms: 2,
-    capacity: "do 5 osoba",
+    capacity: "do 4 osobe",
     floor: "2. kat",
     features: [
       "2 spavaće sobe",
@@ -155,7 +174,7 @@ export const apartments: Apartment[] = [
       "Dječje igralište",
     ],
     mainImage: villaOleandarPool,
-    gallery: [villaOleandarPool, villaAlternus1, interiorLiving, opatijaSeaView],
+    gallery: [villaOleandarPool, aria1, aria2, aria6, aria10, aria11, aria5, aria12, aria15, aria16,aria3, aria4, aria7,aria8, aria9, aria13, aria14, aria17],
     seoTitle:
       "Apartman Aria — Villa Oleandar | Bazen, igralište i pogled na more",
     seoDescription:
