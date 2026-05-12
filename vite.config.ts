@@ -4,7 +4,7 @@ export default defineConfig({
   // Disable Cloudflare Workers build target — we deploy to Vercel as a SPA.
   cloudflare: false,
   tanstackStart: {
-    spa: { enabled: true },
+    spa: { enabled: false },
     prerender: { enabled: true },
   },
 });
