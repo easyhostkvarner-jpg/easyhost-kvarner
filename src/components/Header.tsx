@@ -51,12 +51,13 @@ export function Header() {
           <nav className="flex flex-col px-4 py-4">
             {links.map((l) => (
               <Link
-                key={l.to}
+                key={`${l.to}#${l.hash ?? ""}`}
                 to={l.to}
+                hash={l.hash}
                 onClick={() => setOpen(false)}
                 className="py-3 text-sm font-medium text-muted-foreground"
-                activeProps={{ className: "text-brand font-semibold" }}
-                activeOptions={{ exact: l.to === "/" }}
+                activeProps={l.hash ? {} : { className: "text-brand font-semibold" }}
+                activeOptions={{ exact: l.to === "/" && !l.hash }}
               >
                 {l.label}
               </Link>
