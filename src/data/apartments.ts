@@ -196,7 +196,7 @@ export const apartments: Apartment[] = [
     slug: "villa-oleandar-apartman-aria",
     name: "Apartman Aria",
     villa: "Villa Oleandar",
-    location: "Veprinac, okolica Opatije",
+    location: "Vlašići 4, Veprinac",
     shortDescription:
       "Apartman s 2 spavaće sobe, terasom s pogledom na more i dijeljenim bazenom.",
     bedrooms: 2,
@@ -227,7 +227,7 @@ export const apartments: Apartment[] = [
     slug: "villa-oleandar-apartman-lea",
     name: "Apartman Lea",
     villa: "Villa Oleandar",
-    location: "Veprinac, okolica Opatije",
+    location: "Vlašići 4, Veprinac",
     shortDescription:
       "Komforan apartman s 2 spavaće sobe, terasom s pogledom i pristupom bazenu.",
     bedrooms: 2,
@@ -257,7 +257,7 @@ export const apartments: Apartment[] = [
     slug: "villa-oleandar-apartman-bella",
     name: "Apartman Bella",
     villa: "Villa Oleandar",
-    location: "Veprinac, okolica Opatije",
+    location: "Vlašići 4, Veprinac",
     shortDescription:
       "Ugodan apartman u sklopu Ville Oleandar s pristupom bazenu i mirnom okolicom.",
     bedrooms: 2,
@@ -303,11 +303,11 @@ export const apartments: Apartment[] = [
     slug: "opatija-apartman-pogled-more",
     name: "Apartman Opatija — pogled na more",
     villa: "Opatija",
-    location: "Opatija, centar",
+    location: "Opatija",
     shortDescription:
       "Apartman 2+1 na 2. katu s prekrasnom terasom i pogledom na more.",
-    bedroom: 1,
-    bathroom: 1,
+    bedrooms: 1,
+    bathrooms: 1,
     capacity: "2+1 osobe",
     floor: "2. kat",
     features: [
