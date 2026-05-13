@@ -21,11 +21,12 @@ export function Header() {
         <nav className="hidden items-center gap-8 lg:flex">
           {links.map((l) => (
             <Link
-              key={l.to}
+              key={`${l.to}#${l.hash ?? ""}`}
               to={l.to}
+              hash={l.hash}
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-brand"
-              activeProps={{ className: "text-brand font-semibold" }}
-              activeOptions={{ exact: l.to === "/" }}
+              activeProps={l.hash ? {} : { className: "text-brand font-semibold" }}
+              activeOptions={{ exact: l.to === "/" && !l.hash }}
             >
               {l.label}
             </Link>
