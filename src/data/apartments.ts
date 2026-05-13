@@ -306,8 +306,8 @@ export const apartments: Apartment[] = [
     location: "Opatija, centar",
     shortDescription:
       "Apartman 2+1 na 2. katu s prekrasnom terasom i pogledom na more.",
-    bedrooms: 1,
-    bathrooms: 1,
+    bedroom: 1,
+    bathroom: 1,
     capacity: "2+1 osobe",
     floor: "2. kat",
     features: [
