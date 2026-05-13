@@ -4,11 +4,12 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 
 const links = [
-  { to: "/", label: "Naslovna" },
-  { to: "/usluge", label: "Usluge" },
-  { to: "/kako-funkcionira", label: "Kako funkcionira" },
-  { to: "/o-nama", label: "O nama" },
-  { to: "/kontakt", label: "Kontakt" },
+  { to: "/", label: "Naslovna", hash: undefined as string | undefined },
+  { to: "/", label: "Apartmani", hash: "apartmani" },
+  { to: "/usluge", label: "Usluge", hash: undefined as string | undefined },
+  { to: "/kako-funkcionira", label: "Kako funkcionira", hash: undefined as string | undefined },
+  { to: "/o-nama", label: "O nama", hash: undefined as string | undefined },
+  { to: "/kontakt", label: "Kontakt", hash: undefined as string | undefined },
 ] as const;
 
 export function Header() {
