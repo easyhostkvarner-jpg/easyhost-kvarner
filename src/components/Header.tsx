@@ -4,11 +4,12 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 
 const links = [
-  { to: "/", label: "Naslovna" },
-  { to: "/usluge", label: "Usluge" },
-  { to: "/kako-funkcionira", label: "Kako funkcionira" },
-  { to: "/o-nama", label: "O nama" },
-  { to: "/kontakt", label: "Kontakt" },
+  { to: "/", label: "Naslovna", hash: undefined as string | undefined },
+  { to: "/", label: "Apartmani", hash: "apartmani" },
+  { to: "/usluge", label: "Usluge", hash: undefined as string | undefined },
+  { to: "/kako-funkcionira", label: "Kako funkcionira", hash: undefined as string | undefined },
+  { to: "/o-nama", label: "O nama", hash: undefined as string | undefined },
+  { to: "/kontakt", label: "Kontakt", hash: undefined as string | undefined },
 ] as const;
 
 export function Header() {
@@ -20,11 +21,12 @@ export function Header() {
         <nav className="hidden items-center gap-8 lg:flex">
           {links.map((l) => (
             <Link
-              key={l.to}
+              key={`${l.to}#${l.hash ?? ""}`}
               to={l.to}
+              hash={l.hash}
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-brand"
-              activeProps={{ className: "text-brand font-semibold" }}
-              activeOptions={{ exact: l.to === "/" }}
+              activeProps={l.hash ? {} : { className: "text-brand font-semibold" }}
+              activeOptions={{ exact: l.to === "/" && !l.hash }}
             >
               {l.label}
             </Link>
@@ -49,12 +51,13 @@ export function Header() {
           <nav className="flex flex-col px-4 py-4">
             {links.map((l) => (
               <Link
-                key={l.to}
+                key={`${l.to}#${l.hash ?? ""}`}
                 to={l.to}
+                hash={l.hash}
                 onClick={() => setOpen(false)}
                 className="py-3 text-sm font-medium text-muted-foreground"
-                activeProps={{ className: "text-brand font-semibold" }}
-                activeOptions={{ exact: l.to === "/" }}
+                activeProps={l.hash ? {} : { className: "text-brand font-semibold" }}
+                activeOptions={{ exact: l.to === "/" && !l.hash }}
               >
                 {l.label}
               </Link>
