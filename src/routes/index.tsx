@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { Calendar, Users, MessageCircle, Sparkles, BedDouble, ShieldCheck, FileText, Wrench, BarChart3, KeyRound, CheckCircle2, ArrowRight, Star, TrendingUp, Home } from "lucide-react";
-import heroImg from "@/assets/hero.jpg";
-import towelsImg from "@/assets/towels.jpg";
-import interiorImg from "@/assets/interior.jpg";
-import keysImg from "@/assets/keys.jpg";
+import heroImg from "@/assets/hero.webp";
+import towelsImg from "@/assets/towels.webp";
+import interiorImg from "@/assets/interior.webp";
+import keysImg from "@/assets/keys.webp";
 import { apartments } from "@/data/apartments";
 import { ApartmentCard } from "@/components/ApartmentCard";
 

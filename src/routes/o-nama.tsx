@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { Heart, Shield, Sparkles, ArrowRight } from "lucide-react";
-import interiorImg from "@/assets/interior.jpg";
+import interiorImg from "@/assets/interior.webp";
 
 export const Route = createFileRoute("/o-nama")({
   head: () => ({
