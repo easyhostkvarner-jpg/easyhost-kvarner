@@ -1,10 +1,18 @@
 import { Link } from "@tanstack/react-router";
-import { BedDouble, Bath, MapPin, ArrowRight, Users } from "lucide-react";
+import { BedDouble, Bath, MapPin, ArrowRight, Users, CalendarCheck } from "lucide-react";
 import type { Apartment } from "@/data/apartments";
 
 export function ApartmentCard({ apartment }: { apartment: Apartment }) {
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-3xl border border-border/70 bg-card shadow-card transition-all hover:-translate-y-1.5 hover:border-brand/40 hover:shadow-glow">
+      {/* Full-card click target */}
+      <Link
+        to="/apartmani/$slug"
+        params={{ slug: apartment.slug }}
+        aria-label={`Otvori ${apartment.villa} — ${apartment.name}`}
+        className="absolute inset-0 z-10"
+      />
+
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={apartment.mainImage}
@@ -37,14 +45,24 @@ export function ApartmentCard({ apartment }: { apartment: Apartment }) {
           </span>
         </div>
 
-        <Link
-          to="/apartmani/$slug"
-          params={{ slug: apartment.slug }}
-          className="group/btn mt-6 inline-flex items-center justify-center gap-2 rounded-full gradient-cta px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition-all hover:scale-[1.02]"
-        >
-          Pogledaj više
-          <ArrowRight size={14} className="transition-transform group-hover/btn:translate-x-1" />
-        </Link>
+        <div className="relative z-20 mt-6 flex flex-col gap-2 sm:flex-row">
+          <Link
+            to="/apartmani/$slug"
+            params={{ slug: apartment.slug }}
+            className="group/btn inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-brand/30 bg-white px-4 py-2.5 text-sm font-semibold text-brand-dark transition-all hover:scale-[1.02] hover:bg-brand/5"
+          >
+            Pogledaj više
+            <ArrowRight size={14} className="transition-transform group-hover/btn:translate-x-1" />
+          </Link>
+          <Link
+            to="/apartmani/$slug"
+            params={{ slug: apartment.slug }}
+            hash="rezervacija"
+            className="inline-flex flex-1 items-center justify-center gap-2 rounded-full gradient-cta px-4 py-2.5 text-sm font-semibold text-white shadow-soft transition-all hover:scale-[1.02]"
+          >
+            <CalendarCheck size={14} /> Rezerviraj sada
+          </Link>
+        </div>
       </div>
     </article>
   );
