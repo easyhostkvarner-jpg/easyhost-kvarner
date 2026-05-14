@@ -271,7 +271,7 @@ export const apartments: Apartment[] = [
       "Parking",
       "Mirna lokacija",
     ],
-    mainImage: bella4,
+    mainImage: bella0,
     gallery: [ bella1,
   bella2,
   bella3,
