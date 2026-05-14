@@ -74,11 +74,11 @@ function Index() {
               Kvarner & Istra
             </span>
             <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-brand-dark sm:text-5xl lg:text-[4rem]">
-              Jednostavno upravljanje{" "}
-              <span className="gradient-text">smještajem</span> na Kvarneru
+              Upravljanje apartmanima i izdavanje smještaja na{" "}
+              <span className="gradient-text">Kvarneru</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-foreground/80">
-              Brinemo o vašim apartmanima i kućama za odmor – od prijave gostiju, prijave u eVisitor, čišćenja i posteljine – vi uživate, a mi radimo.
+              Profesionalno upravljanje apartmanima Kvarner — od izdavanja smještaja, prijave gostiju u eVisitor, čišćenja i posteljine. Pokrivamo Opatiju, Lovran, Ičiće, Mošćeničku Dragu i cijelu Istru.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/kontakt" className="group inline-flex items-center gap-2 rounded-full gradient-cta px-7 py-3.5 text-sm font-semibold text-white shadow-glow transition-all hover:scale-[1.03]">
