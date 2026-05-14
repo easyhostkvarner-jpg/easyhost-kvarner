@@ -11,10 +11,28 @@ import { ApartmentCard } from "@/components/ApartmentCard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Upravljanje apartmanima Kvarner | EasyHost Kvarner" },
-      { name: "description", content: "Profesionalno upravljanje apartmanima i kućama za odmor na Kvarneru i u Istri. Bez stresa, više gostiju i bolje ocjene." },
-      { property: "og:title", content: "EasyHost Kvarner — Vaš dom, naša briga." },
-      { property: "og:description", content: "Profesionalno upravljanje apartmanima i kućama za odmor na Kvarneru i Istri." },
+      { title: "Upravljanje apartmanima Kvarner | Izdavanje apartmana i smještaj" },
+      { name: "description", content: "Upravljanje apartmanima Kvarner i izdavanje apartmana — profesionalna briga o smještaju u Opatiji, Lovranu, Ičićima, Mošćeničkoj Dragi i cijeloj Istri." },
+      { name: "keywords", content: "upravljanje apartmanima Kvarner, izdavanje apartmana Kvarner, smještaj Kvarner, apartmani Kvarner, upravljanje smještajem Kvarner, apartmani Opatija, apartmani Istra" },
+      { property: "og:title", content: "Upravljanje apartmanima Kvarner | Izdavanje apartmana i smještaj" },
+      { property: "og:description", content: "Profesionalno upravljanje apartmanima i izdavanje smještaja na Kvarneru i u Istri — više rezervacija, bolje ocjene, bez stresa." },
+      { property: "og:url", content: "/" },
+      { property: "og:type", content: "website" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "EasyHost Kvarner",
+          description: "Upravljanje apartmanima i izdavanje smještaja na Kvarneru i u Istri.",
+          areaServed: ["Kvarner", "Istra", "Opatija", "Lovran", "Ičići", "Mošćenička Draga", "Matulji"],
+          serviceType: "Upravljanje apartmanima i izdavanje smještaja",
+          address: { "@type": "PostalAddress", addressRegion: "Kvarner", addressCountry: "HR" },
+        }),
+      },
     ],
   }),
   component: Index,
