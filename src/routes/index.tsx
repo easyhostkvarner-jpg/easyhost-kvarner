@@ -81,7 +81,7 @@ function Index() {
               <span className="gradient-text">Kvarneru</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-foreground/80">
-              Profesionalno upravljanje apartmanima Kvarner — od izdavanja smještaja, prijave gostiju u eVisitor, čišćenja i posteljine.
+              Profesionalno upravljanje apartmanima Kvarner — od oglašavanja i izdavanja smještaja, do prijave gostiju u eVisitor, čišćenja i održavanja posteljine.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/kontakt" className="group inline-flex items-center gap-2 rounded-full gradient-cta px-7 py-3.5 text-sm font-semibold text-white shadow-glow transition-all hover:scale-[1.03]">
