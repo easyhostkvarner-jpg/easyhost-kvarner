@@ -201,7 +201,7 @@ export const apartments: Apartment[] = [
       "Apartman s 2 spavaće sobe, terasom s pogledom na more i dijeljenim bazenom.",
     bedrooms: 2,
     bathrooms: 2,
-    capacity: "do 4 osobe",
+    capacity: "do 5 osoba",
     floor: "2. kat",
     features: [
       "2 spavaće sobe",
@@ -232,7 +232,7 @@ export const apartments: Apartment[] = [
       "Komforan apartman s 2 spavaće sobe, terasom s pogledom i pristupom bazenu.",
     bedrooms: 2,
     bathrooms: 2,
-    capacity: "do 5 osoba",
+    capacity: "do 4 osobe",
     features: [
       "2 spavaće sobe",
       "Kupaona + gostinjski WC",
