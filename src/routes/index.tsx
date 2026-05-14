@@ -11,10 +11,28 @@ import { ApartmentCard } from "@/components/ApartmentCard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Upravljanje apartmanima Kvarner | EasyHost Kvarner" },
-      { name: "description", content: "Profesionalno upravljanje apartmanima i kućama za odmor na Kvarneru i u Istri. Bez stresa, više gostiju i bolje ocjene." },
-      { property: "og:title", content: "EasyHost Kvarner — Vaš dom, naša briga." },
-      { property: "og:description", content: "Profesionalno upravljanje apartmanima i kućama za odmor na Kvarneru i Istri." },
+      { title: "Upravljanje apartmanima Kvarner | Izdavanje apartmana i smještaj" },
+      { name: "description", content: "Upravljanje apartmanima Kvarner i izdavanje apartmana — profesionalna briga o smještaju u Opatiji, Lovranu, Ičićima, Mošćeničkoj Dragi i cijeloj Istri." },
+      { name: "keywords", content: "upravljanje apartmanima Kvarner, izdavanje apartmana Kvarner, smještaj Kvarner, apartmani Kvarner, upravljanje smještajem Kvarner, apartmani Opatija, apartmani Istra" },
+      { property: "og:title", content: "Upravljanje apartmanima Kvarner | Izdavanje apartmana i smještaj" },
+      { property: "og:description", content: "Profesionalno upravljanje apartmanima i izdavanje smještaja na Kvarneru i u Istri — više rezervacija, bolje ocjene, bez stresa." },
+      { property: "og:url", content: "/" },
+      { property: "og:type", content: "website" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "EasyHost Kvarner",
+          description: "Upravljanje apartmanima i izdavanje smještaja na Kvarneru i u Istri.",
+          areaServed: ["Kvarner", "Istra", "Opatija", "Lovran", "Ičići", "Mošćenička Draga", "Matulji"],
+          serviceType: "Upravljanje apartmanima i izdavanje smještaja",
+          address: { "@type": "PostalAddress", addressRegion: "Kvarner", addressCountry: "HR" },
+        }),
+      },
     ],
   }),
   component: Index,
@@ -56,11 +74,11 @@ function Index() {
               Kvarner & Istra
             </span>
             <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-brand-dark sm:text-5xl lg:text-[4rem]">
-              Jednostavno upravljanje{" "}
-              <span className="gradient-text">smještajem</span> na Kvarneru
+              Upravljanje apartmanima i izdavanje smještaja na{" "}
+              <span className="gradient-text">Kvarneru</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-foreground/80">
-              Brinemo o vašim apartmanima i kućama za odmor – od prijave gostiju, prijave u eVisitor, čišćenja i posteljine – vi uživate, a mi radimo.
+              Profesionalno upravljanje apartmanima Kvarner — od izdavanja smještaja, prijave gostiju u eVisitor, čišćenja i posteljine. Pokrivamo Opatiju, Lovran, Ičiće, Mošćeničku Dragu i cijelu Istru.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/kontakt" className="group inline-flex items-center gap-2 rounded-full gradient-cta px-7 py-3.5 text-sm font-semibold text-white shadow-glow transition-all hover:scale-[1.03]">
