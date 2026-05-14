@@ -80,7 +80,7 @@ import lea12 from  "@/assets/apartments/lea12.webp";
 import lea13 from  "@/assets/apartments/lea13.webp";
 import lea14 from  "@/assets/apartments/lea14.webp";
 import lea15 from  "@/assets/apartments/lea15.webp";
-
+import bella0 from "@/assets/apartments/bella0.jpg";
 import bella1 from "@/assets/apartments/bella1.webp";
 import bella2 from "@/assets/apartments/bella2.webp";
 import bella3 from "@/assets/apartments/bella3.webp";
