@@ -40,7 +40,7 @@ function KontaktPage() {
         <div className="mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-5 lg:px-8">
           <div className="lg:col-span-2 space-y-4">
             {[
-              { icon: Phone, t: "Telefon", v: "+385 99 123 4567", href: "tel:+385991234567" },
+              { icon: Phone, t: "Telefon", v: "+385 91 248 5966", href: "tel:+385912485966" },
               { icon: Mail, t: "Email", v: "easyhost.kvarner@gmail.com", href: "mailto:easyhost.kvarner@gmail.com" },
               { icon: MapPin, t: "Lokacija", v: "Kvarner & Istra" },
             ].map((c) => {
