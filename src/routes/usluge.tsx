@@ -10,6 +10,7 @@ export const Route = createFileRoute("/usluge")({
       { property: "og:title", content: "Usluge — EasyHost Kvarner" },
       { property: "og:description", content: "Sve na jednom mjestu — od prijave gosta do čiste posteljine." },
     ],
+    links: [{ rel: "canonical", href: "https://easyhostkvarner.com/usluge" }],
   }),
   component: UslugePage,
 });

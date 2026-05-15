@@ -10,6 +10,7 @@ export const Route = createFileRoute("/kako-funkcionira")({
       { property: "og:title", content: "Kako funkcionira — EasyHost Kvarner" },
       { property: "og:description", content: "3 koraka do bezbrižnog upravljanja smještajem." },
     ],
+    links: [{ rel: "canonical", href: "https://easyhostkvarner.com/kako-funkcionira" }],
   }),
   component: KakoPage,
 });

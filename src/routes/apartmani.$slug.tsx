@@ -37,6 +37,7 @@ export const Route = createFileRoute("/apartmani/$slug")({
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:image", content: a.mainImage },
       ],
+      links: [{ rel: "canonical", href: `https://easyhostkvarner.com/apartmani/${a.slug}` }],
     };
   },
   notFoundComponent: () => (

@@ -17,6 +17,7 @@ export const Route = createFileRoute("/kontakt")({
       { property: "og:title", content: "Kontakt — EasyHost Kvarner" },
       { property: "og:description", content: "Javite nam se za ponudu — bez obveze." },
     ],
+    links: [{ rel: "canonical", href: "https://easyhostkvarner.com/kontakt" }],
   }),
   component: KontaktPage,
 });

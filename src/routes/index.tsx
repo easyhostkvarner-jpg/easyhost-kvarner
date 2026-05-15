@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "canonical", href: "/" },
+      { rel: "canonical", href: "https://easyhostkvarner.com/" },
       { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" } as any,
     ],
     scripts: [

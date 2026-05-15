@@ -11,6 +11,7 @@ export const Route = createFileRoute("/o-nama")({
       { property: "og:title", content: "O nama — EasyHost Kvarner" },
       { property: "og:description", content: "Lokalni tim za upravljanje smještajem na Kvarneru i Istri." },
     ],
+    links: [{ rel: "canonical", href: "https://easyhostkvarner.com/o-nama" }],
   }),
   component: ONamaPage,
 });
