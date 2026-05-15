@@ -31,6 +31,7 @@ export const Route = createRootRoute({
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "EasyHost Kvarner — Upravljanje apartmanima" },
       { name: "description", content: "Profesionalno upravljanje apartmanima i kućama za odmor na Kvarneru i Istri." },
+      { name: "google-site-verification", content: "tNY1h298pyCt41GIomvO5-oq81WWXsCEYK4pSJXq4M8" },
       { name: "author", content: "EasyHost Kvarner" },
       { property: "og:title", content: "EasyHost Kvarner" },
       { property: "og:description", content: "Vaš dom, naša briga." },
