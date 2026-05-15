@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://easyhost-kvarner.vercel.app/sitemap.xml
+Sitemap: https://easyhostkvarner.com/sitemap.xml
