@@ -21,7 +21,7 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-white/70">Stranice</h4>
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-white/70">Stranice</h2>
           <ul className="mt-4 space-y-2 text-sm">
             <li><Link to="/usluge" className="hover:text-white/80">Usluge</Link></li>
             <li><Link to="/kako-funkcionira" className="hover:text-white/80">Kako funkcionira</Link></li>
@@ -30,7 +30,7 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-white/70">Pratite nas</h4>
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-white/70">Pratite nas</h2>
           <div className="mt-4 flex gap-3">
             <a href="https://www.instagram.com/easyhost.kvarner?igsh=MXNhZGFvN2hsN2Rvag==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="rounded-full bg-white/10 p-3 hover:bg-white/20"><Instagram size={18} /></a>
             <a href="https://www.facebook.com/share/18aMG9Fix5/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="rounded-full bg-white/10 p-3 hover:bg-white/20"><Facebook size={18} /></a>
