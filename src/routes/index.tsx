@@ -141,7 +141,7 @@ function Index() {
           <div className="group relative">
             <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-brand/30 to-brand-dark/20 blur-2xl opacity-60 transition-opacity group-hover:opacity-90" />
             <div className="relative overflow-hidden rounded-3xl shadow-glow ring-1 ring-white/40">
-              <img src={towelsImg} alt="Svježa posteljina i ručnici" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" width={1280} height={896} loading="lazy" />
+              <img src={towelsImg} alt="Svježa posteljina i ručnici" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" width={1280} height={896} loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -215,7 +215,7 @@ function Index() {
           <div className="group relative lg:col-span-1">
             <div className="absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-brand/30 to-brand-dark/20 blur-2xl opacity-50" />
             <div className="relative overflow-hidden rounded-3xl shadow-glow ring-1 ring-white/40">
-              <img src={interiorImg} alt="Mediteranski interijer" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" width={1280} height={896} loading="lazy" />
+              <img src={interiorImg} alt="Mediteranski interijer" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" width={1280} height={896} loading="lazy" decoding="async" />
             </div>
           </div>
           <div className="text-center lg:text-left">
@@ -269,7 +269,7 @@ function Index() {
           <div className="group relative">
             <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-brand/30 to-brand-dark/20 blur-2xl opacity-50" />
             <div className="relative overflow-hidden rounded-3xl shadow-glow ring-1 ring-white/40">
-              <img src={keysImg} alt="Ključ apartmana" className="h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-105" width={1024} height={1280} loading="lazy" />
+              <img src={keysImg} alt="Ključ apartmana" className="h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-105" width={1024} height={1280} loading="lazy" decoding="async" />
             </div>
           </div>
           <div>

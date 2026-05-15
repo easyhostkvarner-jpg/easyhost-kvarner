@@ -80,6 +80,7 @@ function ApartmentPage() {
                 src={activeImage}
                 alt={`${apartment.villa} — ${apartment.name}`}
                 className="aspect-[4/3] w-full object-cover"
+                  decoding="async"
               />
             </div>
             <div className="mt-3 grid grid-cols-4 gap-2">
@@ -91,7 +92,7 @@ function ApartmentPage() {
                     activeImage === img ? "ring-brand" : "ring-transparent hover:ring-brand/40"
                   }`}
                 >
-                  <img src={img} alt="" className="aspect-square w-full object-cover" />
+                  <img src={img} alt="" className="aspect-square w-full object-cover"  loading="lazy" decoding="async" />
                 </button>
               ))}
             </div>
@@ -198,6 +199,7 @@ function ApartmentPage() {
                       alt={a.name}
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                       loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="p-4">

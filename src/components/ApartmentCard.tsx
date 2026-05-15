@@ -19,6 +19,7 @@ export function ApartmentCard({ apartment }: { apartment: Apartment }) {
           alt={`${apartment.villa} — ${apartment.name}`}
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
           loading="lazy"
+          decoding="async"
         />
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/60 to-transparent" />
         <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-brand-dark backdrop-blur-sm">
