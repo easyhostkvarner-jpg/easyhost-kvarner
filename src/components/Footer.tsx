@@ -13,7 +13,7 @@ export function Footer() {
           <p className="mt-4 font-script text-xl text-white/90">Vaš dom, naša briga.</p>
         </div>
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-white/70">Kontakt</h4>
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-white/70">Kontakt</h2>
           <ul className="mt-4 space-y-3 text-sm">
             <li className="flex items-center gap-3"><Phone size={16} /> +385 91 248 5966</li>
             <li className="flex items-center gap-3"><Mail size={16} /> <a href="easyhost.kvarner@gmail.com" className="hover:text-white/80">easyhost.kvarner@gmail.com</a></li>
