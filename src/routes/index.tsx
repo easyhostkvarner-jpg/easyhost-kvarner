@@ -4,7 +4,7 @@ import { Calendar, Users, MessageCircle, Sparkles, BedDouble, ShieldCheck, FileT
 import heroImg from "@/assets/hero.webp";
 import towelsImg from "@/assets/towels.webp";
 import interiorImg from "@/assets/interior.webp";
-import keysImg from "@/assets/keys.webp";
+import keysImg from "@/assets/keys.jpeg";
 import { apartments } from "@/data/apartments";
 import { ApartmentCard } from "@/components/ApartmentCard";
 
