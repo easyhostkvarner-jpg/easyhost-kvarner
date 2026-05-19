@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { Calendar, Users, MessageCircle, Sparkles, BedDouble, ShieldCheck, FileText, Wrench, BarChart3, KeyRound, ArrowRight } from "lucide-react";
+import { Calendar, Users, MessageCircle, Sparkles, BedDouble, ShieldCheck, FileText, Wrench, BarChart3, KeyRound, ArrowRight, Waves, Package2, RefreshCw} from "lucide-react";
 
 export const Route = createFileRoute("/usluge")({
   head: () => ({
@@ -26,6 +26,10 @@ const items = [
   { icon: FileText, t: "Izdavanje računa i evidencija", d: "Knjiga gostiju, računi, sva administracija — vođena uredno i transparentno." },
   { icon: Wrench, t: "Održavanje i sitni popravci", d: "Koordinacija servisa i majstora, briga o opremi i interijeru." },
   { icon: BarChart3, t: "Redovito izvještavanje", d: "Mjesečni izvještaji o popunjenosti, prihodu i stanju objekta — potpuna transparentnost." },
+    {icon: Waves, t: "Čišćenje i održavanje bazena", d: "redovno čišćenje i kontrola kvalitete vode"},
+  { icon: Package2, t: "Priprema za sezonu", d: "uređenje i kompletna priprema objekta prije početka sezone"},
+   { icon:  RefreshCw, t: "Mjesečno održavanje", d: "redovna briga i održavanje objekta tijekom cijelog mjeseca"},
+
 ];
 
 function UslugePage() {
