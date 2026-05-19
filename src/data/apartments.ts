@@ -198,7 +198,7 @@ export const apartments: Apartment[] = [
     villa: "Villa Oleandar",
     location: "Vlašići 4, Veprinac",
     shortDescription:
-      "Apartman s 2 spavaće sobe, terasom s pogledom na more i dijeljenim bazenom.",
+      "Moderan i prostran apartman sa 2 spavaće sobe, do 5 osoba. Pristup bazenu i dječijem parku.",
     bedrooms: 2,
     bathrooms: 2,
     capacity: "do 5 osoba",
