@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { Calendar, Users, MessageCircle, Sparkles, BedDouble, ShieldCheck, FileText, Wrench, BarChart3, KeyRound, CheckCircle2, ArrowRight, Star, TrendingUp, Home, Waves, Package2 } from "lucide-react";
+import { Calendar, Users, MessageCircle, Sparkles, BedDouble, ShieldCheck, FileText, Wrench, BarChart3, KeyRound, CheckCircle2, ArrowRight, Star, TrendingUp, Home, Waves, Package2, RefreshCw } from "lucide-react";
 import heroImg from "@/assets/hero.webp";
 import towelsImg from "@/assets/towels.webp";
 import interiorImg from "@/assets/interior.webp";
@@ -54,6 +54,7 @@ const services = [
   { icon: BarChart3, title: "Redovito izvještavanje", text: "i potpuna transparentnost" },
   {icon: Waves, title: "Čišćenje i održavanje bazena", text: "redovno čišćenje i kontrola kvalitete vode"},
   { icon: Package2, title: "Priprema za sezonu", text: "uređenje i kompletna priprema objekta prije početka sezone"},
+   { icon:  RefreshCw, title: "Mjesečno održavanje", text: "redovna briga i održavanje objekta tijekom cijelog mjeseca"},
 ];
 
 function Index() {
