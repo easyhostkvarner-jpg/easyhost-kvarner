@@ -52,15 +52,8 @@ const services = [
   { icon: FileText, title: "Izdavanje računa", text: "i vođenje evidencije" },
   { icon: Wrench, title: "Održavanje objekta", text: "i koordinacija popravaka" },
   { icon: BarChart3, title: "Redovito izvještavanje", text: "i potpuna transparentnost" },
-  {
-  icon: Waves,
-  title: "Čišćenje i održavanje bazena",
-  text: "redovno čišćenje i kontrola kvalitete vode"
-},
-   icon: Package2,
-  title: "Priprema za sezonu",
-  text: "uređenje i kompletna priprema objekta prije početka sezone"
-},
+  {icon: Waves, title: "Čišćenje i održavanje bazena", text: "redovno čišćenje i kontrola kvalitete vode"},
+  { icon: Package2, title: "Priprema za sezonu", text: "uređenje i kompletna priprema objekta prije početka sezone"},
 ];
 
 function Index() {
